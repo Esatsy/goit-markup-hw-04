@@ -23,6 +23,9 @@ img{
     margin: 0 auto;
     padding: 0 15px;
 }
+.page-nav-link{
+    color: #2e2f42;
+}
 .active {
   position: relative;
   color: #404bbf;
@@ -88,7 +91,6 @@ text-decoration: none;
 .page-nav-link{
     display: flex;
     padding: 24px 0;
-    color: #2e2f42;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -141,7 +143,8 @@ text-decoration: none;
     display: flex;
     align-items: center;
     height: 600px;
-    background-image: url(../images/Dark-bg.png), url(../images/heroimage.png);
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg.png), url(../images/heroimage.png);
+    
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -175,6 +178,7 @@ text-decoration: none;
     letter-spacing: 0.04em;
     cursor: pointer;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .hero-button:hover{
@@ -247,16 +251,45 @@ font-size: 36px;
 .our-team-section-list{
     display: flex;
     gap: 24px;
+    justify-content: center;
     
 }
 .our-team-section-list-item{
     border-radius: 0px 0px 4px 4px;
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.our-team-seection-list-item .our-team-section-list-item-container{
+.our-team-section-list-item .our-team-section-list-item-container{
     padding: 32px 0;
 
+}
+.our-team-section-social-container-item{
+    width: 40px;
+    height: 40px;
+    
+}
+.our-team-section-social-container{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+}
+.our-team-section-social-link{
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+}
+.our-team-section-social-link:hover,.our-team-section-social-link:focus{
+    background-color: #404bbf;
+}
+.ot-social-icon{
+    fill: #f4f4fd;
 }
 /* Our Portfolio section*/
 .our-portfolio-section{
@@ -279,6 +312,7 @@ row-gap: 48px;
 .our-portfolio-list-item{
     width: calc((100% - 72px) / 4);
 }
+
 /*Footer*/
 .page-footer{
     padding: 100px 0;
